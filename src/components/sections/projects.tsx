@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dialog"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { SectionHeading } from "@/components/ui/section-heading"
-import { projects, getFeaturedProjects } from "@/data/projects"
+import { projects } from "@/data/projects"
 import { formatDate, getTechColor } from "@/lib/utils"
 import type { Project } from "@/types"
 import {
@@ -316,7 +316,7 @@ export function Projects() {
       ? projects
       : projects.filter((p) => p.category === activeCategory)
 
-  const featuredProjects = getFeaturedProjects()
+  const featuredProjects = projects.filter(p => p.featured)
 
   return (
     <section id="projects" className="py-20 md:py-32 relative">
