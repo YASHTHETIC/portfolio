@@ -1,0 +1,135 @@
+import { Experience } from "@/types";
+
+export const experiences: Experience[] = [
+  {
+    id: "exp-1",
+    company: "NeuralEdge Technologies",
+    role: "AI Engineer Intern",
+    location: "Bangalore, India",
+    startDate: "2024-01",
+    endDate: "2024-06",
+    description:
+      "Developed and deployed production-grade ML models for real-time document understanding and extraction, reducing manual processing time by 73%.",
+    achievements: [
+      "Built a multi-modal document parser using LayoutLMv3 and custom OCR pipeline that extracts structured data from invoices, receipts, and contracts with 94.2% accuracy",
+      "Designed and implemented a RAG-based internal knowledge base serving 200+ employees, reducing average query response time from 12 minutes to under 30 seconds",
+      "Optimized model inference latency by 62% through ONNX Runtime conversion, TensorRT quantization, and dynamic batching strategies",
+      "Developed automated A/B testing framework for model variants using MLflow tracking and FastAPI endpoints, enabling data-driven model selection",
+      "Created comprehensive monitoring dashboards with Prometheus and Grafana to track model drift, latency percentiles, and error rates in production",
+    ],
+    technologies: [
+      "PyTorch",
+      "FastAPI",
+      "Docker",
+      "AWS SageMaker",
+      "ONNX Runtime",
+      "TensorRT",
+      "MLflow",
+      "Redis",
+      "PostgreSQL",
+      "GitHub Actions",
+    ],
+    type: "internship",
+    logo: "/images/companies/neuraledge.svg",
+    website: "https://neuraledge.ai",
+  },
+  {
+    id: "exp-2",
+    company: "SynapseML",
+    role: "Machine Learning Engineer",
+    location: "Remote",
+    startDate: "2023-06",
+    endDate: "2024-01",
+    description:
+      "Core ML engineer at an early-stage startup building an AI-powered code analysis platform. Led the development of NLP models for automated code review and bug detection.",
+    achievements: [
+      "Architected a fine-tuned CodeLlama-based system for automated code review that identified security vulnerabilities and code smells with 89% precision across 12 programming languages",
+      "Implemented a custom training pipeline using LoRA and PEFT techniques, reducing GPU compute costs by 55% while maintaining model quality",
+      "Built a real-time code similarity detection engine using contrastive learning and FAISS, processing 10K+ repositories with sub-second query latency",
+      "Designed the MLOps infrastructure from scratch including CI/CD pipelines, model versioning with DVC, and automated retraining triggers based on data drift detection",
+      "Mentored 2 junior developers and established code review practices that reduced production bugs by 40%",
+    ],
+    technologies: [
+      "PyTorch",
+      "Hugging Face Transformers",
+      "LoRA",
+      "FAISS",
+      "DVC",
+      "Kubernetes",
+      "GCP Vertex AI",
+      "FastAPI",
+      "MongoDB",
+      "Terraform",
+    ],
+    type: "full-time",
+    logo: "/images/companies/synapseml.svg",
+    website: "https://synapseml.io",
+  },
+  {
+    id: "exp-3",
+    company: "IIT Delhi — CVIP Lab",
+    role: "Computer Vision Research Assistant",
+    location: "New Delhi, India",
+    startDate: "2022-08",
+    endDate: "2023-05",
+    description:
+      "Conducted cutting-edge research in low-light object detection and domain adaptation for medical imaging under Prof. Rajiv Gupta's supervision.",
+    achievements: [
+      "Published first-author paper at IEEE ICPR 2023 on adaptive neural networks for low-light object detection, achieving 8.3% mAP improvement over existing state-of-the-art methods",
+      "Developed a novel attention-based feature enhancement module for YOLO architectures that improved detection accuracy by 12% in severely degraded lighting conditions",
+      "Built a domain adaptation framework for cross-dataset medical image segmentation using adversarial training and self-supervised pretext tasks",
+      "Created an augmented dataset of 50K+ low-light images using physics-based rendering and style transfer, now used as a benchmark by 3 other research groups",
+      "Presented findings at 2 international conferences and collaborated with a team of 5 researchers across 2 institutions",
+    ],
+    technologies: [
+      "PyTorch",
+      "OpenCV",
+      "YOLO",
+      "GANs",
+      "Scientific Computing",
+      "LaTeX",
+      "Python",
+      "NumPy",
+      "Matplotlib",
+    ],
+    type: "internship",
+    logo: "/images/companies/iitd.svg",
+    website: "https://iitd.ac.in",
+  },
+  {
+    id: "exp-4",
+    company: "IIT Delhi — Department of CSE",
+    role: "AI/ML Teaching Assistant",
+    location: "New Delhi, India",
+    startDate: "2022-01",
+    endDate: "2022-12",
+    description:
+      "Served as a teaching assistant for undergraduate and graduate courses in Machine Learning and Deep Learning, mentoring 120+ students.",
+    achievements: [
+      "Designed and graded assignments for the Machine Learning course (CSE471) with 80+ students, creating 12 coding assignments covering supervised, unsupervised, and reinforcement learning",
+      "Held weekly office hours and review sessions, improving average student performance on ML projects by 18% compared to previous semesters",
+      "Developed supplementary Jupyter notebook tutorials on transformer architectures and attention mechanisms that were adopted by the course instructor for future iterations",
+      "Organized a 3-day hands-on workshop on building end-to-end ML pipelines with PyTorch and MLflow attended by 90+ students",
+      "Created an automated grading script using FastAPI that reduced assignment evaluation time from 2 weeks to 2 days",
+    ],
+    technologies: [
+      "Python",
+      "PyTorch",
+      "scikit-learn",
+      "Jupyter",
+      "FastAPI",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+    ],
+    type: "internship",
+    logo: "/images/companies/iitd.svg",
+    website: "https://iitd.ac.in",
+  },
+];
+
+export const getExperienceById = (id: string): Experience | undefined =>
+  experiences.find((exp) => exp.id === id);
+
+export const getExperiencesByType = (type: Experience["type"]): Experience[] =>
+  experiences.filter((exp) => exp.type === type);

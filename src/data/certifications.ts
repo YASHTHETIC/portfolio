@@ -1,0 +1,118 @@
+import { Certification } from "@/types";
+
+export const certifications: Certification[] = [
+  {
+    id: "cert-1",
+    name: "TensorFlow Developer Certificate",
+    issuer: "Google",
+    date: "2023-03",
+    credentialId: "TF-2023-YRK-8472",
+    credentialUrl: "https://www.tensorflow.org/certificate",
+    skills: [
+      "TensorFlow",
+      "Keras",
+      "Neural Networks",
+      "Computer Vision",
+      "NLP",
+      "Time Series",
+      "Model Deployment",
+    ],
+    featured: true,
+  },
+  {
+    id: "cert-2",
+    name: "AWS Certified Machine Learning — Specialty",
+    issuer: "Amazon Web Services",
+    date: "2023-08",
+    expiryDate: "2026-08",
+    credentialId: "AWS-ML-2023-YRK-1192",
+    credentialUrl: "https://aws.amazon.com/certification/",
+    skills: [
+      "AWS SageMaker",
+      "AWS EC2",
+      "AWS S3",
+      "AWS Lambda",
+      "Data Engineering",
+      "Model Training",
+      "Model Deployment",
+      "MLOps",
+    ],
+    featured: true,
+  },
+  {
+    id: "cert-3",
+    name: "Google Cloud Professional Machine Learning Engineer",
+    issuer: "Google Cloud",
+    date: "2023-12",
+    expiryDate: "2025-12",
+    credentialId: "GCP-PMLE-2023-YRK-5531",
+    credentialUrl: "https://cloud.google.com/certification",
+    skills: [
+      "Vertex AI",
+      "BigQuery ML",
+      "Cloud Functions",
+      "TensorFlow",
+      "Scikit-learn",
+      "ML Pipelines",
+      "AutoML",
+    ],
+    featured: true,
+  },
+  {
+    id: "cert-4",
+    name: "PyTorch Certified",
+    issuer: "PyTorch / Meta",
+    date: "2023-10",
+    credentialId: "PT-CERT-2023-YRK-3087",
+    credentialUrl: "https://pytorch.org/certification",
+    skills: [
+      "PyTorch",
+      "Deep Learning",
+      "Model Optimization",
+      "TorchScript",
+      "Distributed Training",
+    ],
+    featured: false,
+  },
+  {
+    id: "cert-5",
+    name: "Deep Learning Specialization",
+    issuer: "Coursera / deeplearning.ai",
+    date: "2022-06",
+    credentialId: "DL-SPEC-2022-YRK-9241",
+    credentialUrl: "https://www.coursera.org/specializations/deep-learning",
+    skills: [
+      "Neural Networks",
+      "CNNs",
+      "RNNs",
+      "Sequence Models",
+      "Optimization",
+      "Regularization",
+      "Batch Normalization",
+    ],
+    featured: true,
+  },
+  {
+    id: "cert-6",
+    name: "NVIDIA Deep Learning Institute — Fundamentals of Deep Learning",
+    issuer: "NVIDIA",
+    date: "2022-09",
+    credentialId: "NVIDIA-DLI-2022-YRK-7713",
+    credentialUrl: "https://www.nvidia.com/en-us/training/",
+    skills: [
+      "CUDA",
+      "cuDNN",
+      "GPU Optimization",
+      "Deep Learning",
+      "Transfer Learning",
+      "TensorRT",
+    ],
+    featured: false,
+  },
+];
+
+export const getCertificationById = (id: string): Certification | undefined =>
+  certifications.find((cert) => cert.id === id);
+
+export const getFeaturedCertifications = (): Certification[] =>
+  certifications.filter((cert) => cert.featured);
