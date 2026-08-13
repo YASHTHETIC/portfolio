@@ -2,6 +2,41 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "proj-modit",
+    title: "MODIT - B2B Construction Materials Platform",
+    shortDescription:
+      "Production-grade Amazon/Flipkart-level e-commerce platform for construction materials with AI pricing, 297 API routes, and premium dark orange design.",
+    longDescription:
+      "A full-stack B2B e-commerce platform for construction materials built with Next.js, TypeScript, and Tailwind CSS. Features 54+ products across 12 categories, AI-powered price comparison, real-time bulk order pricing, supplier verification, wishlist/cart/checkout flow, responsive mega menu, category-colored product cards, and a premium dark orange design system. Backend powered by Node.js with 297 API routes, PostgreSQL (Neon), Redis (Upstash), and 80+ passing tests. Deployed on Vercel with production-grade performance.",
+    thumbnail: "/images/projects/modit.jpg",
+    images: ["/images/projects/modit.jpg"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Redis", "Zustand", "Framer Motion", "Vercel"],
+    category: "web",
+    status: "completed",
+    featured: true,
+    githubUrl: "https://github.com/YASHTHETIC/namo-setu-modit",
+    liveUrl: "https://namo-setu-modit-web.vercel.app",
+    features: [
+      "54+ products across 12 categories with verified Unsplash images",
+      "AI-powered real-time price comparison across 500+ suppliers",
+      "Category-specific color system with premium dark orange design",
+      "Full cart, wishlist, and checkout flow with Zustand state management",
+      "Responsive mega menu, mobile slide-out nav, dark gradient footer",
+      "297 backend API routes with 80+ passing tests",
+      "PostgreSQL (Neon) + Redis (Upstash) infrastructure",
+      "Production deployment on Vercel with optimized performance",
+    ],
+    metrics: {
+      accuracy: "297 API routes",
+      latency: "80+ tests passing",
+      throughput: "54+ products, 12 categories",
+    },
+    startDate: "2025-07",
+    endDate: "2026-08",
+    teamSize: 1,
+    role: "Full Stack Developer",
+  },
+  {
     id: "proj-1",
     title: "Smart Office Assistant",
     shortDescription:
